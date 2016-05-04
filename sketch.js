@@ -16,7 +16,7 @@ function insideTheFence(position){
 		isInside = 1;
 		// do stuff only on change
 	}
-	document.getElementById("content").innerHTML = 'You are here. '+position.latitude+', '+position.longitude+', distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'mi');
+	document.getElementById("content").innerHTML = 'Nothing here yet.';
 }
 
 function outsideTheFence(position) {
@@ -24,5 +24,5 @@ function outsideTheFence(position) {
 		isInside = -1;
 		// do stuff only on change
 	}
-	document.getElementById("content").innerHTML = 'The NAME show is only on display at SFAI. Go there. (You are at '+position.latitude+', '+position.longitude+', distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'mi')+')';
+	document.getElementById("content").innerHTML = '7.803456 N, 122.417144 W is on show at SFAI, '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'mi').toFixed(2)+' miles from here.';
 }
