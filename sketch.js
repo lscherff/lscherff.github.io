@@ -4,7 +4,7 @@ var lat = 37.8039;
 var lon = -122.4173;
 
 function setup(){
-	fence = new geoFence(lat, lon, 0.05, insideTheFence, outsideTheFence, 'mi');
+	fence = new geoFence(lat, lon, 0.03, insideTheFence, outsideTheFence, 'mi');
 }
 
 
@@ -16,7 +16,7 @@ function insideTheFence(position){
 		isInside = 1;
 		// do stuff only on change
 	}
-	document.getElementById("content").innerHTML = 'Nothing here yet.';
+	document.getElementById("content").innerHTML = '7.803456 N, 122.417144 W. Negash Asegde: <a href="http://www.acheron.co/" target="_blank">Acheron</a>, Clare Bland: <a href="" target="_blank">Title</a>, Emma Carroll: <a href="" target="_blank">Title</a>, John Erbach: <a href="" target="_blank">Title</a>, Yelin Huang: <a href="" target="_blank">Title</a>, Josie Kidde: <a href="" target="_blank">Title</a>, Danny Murzhanov: <a href="" target="_blank">Title</a>, Nate Woodward: <a href="" target="_blank">Title</a>.';
 }
 
 function outsideTheFence(position) {
@@ -24,5 +24,6 @@ function outsideTheFence(position) {
 		isInside = -1;
 		// do stuff only on change
 	}
-	document.getElementById("content").innerHTML = '7.803456 N, 122.417144 W is on show at SFAI, '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'mi').toFixed(2)+' miles from here.';
+	document.getElementById("content").innerHTML = '7.803456 N, 122.417144 W. Negash Asegde: <a href="http://www.acheron.co/" target="_blank">Acheron</a>, Clare Bland: <a href="" target="_blank">Title</a>, Emma Carroll: <a href="" target="_blank">Title</a>, John Erbach: <a href="" target="_blank">Title</a>, Yelin Huang: <a href="" target="_blank">Title</a>, Josie Kidde: <a href="" target="_blank">Title</a>, Danny Murzhanov: <a href="" target="_blank">Title</a>, Nate Woodward: <a href="" target="_blank">Title</a>.';
+	//document.getElementById("content").innerHTML = '7.803456 N, 122.417144 W is on show at SFAI, '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'mi').toFixed(2)+' miles from here.';
 }
