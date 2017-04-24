@@ -1,28 +1,15 @@
-var isInside = 0;
-var fence;
-var lat = 37.8039;
-var lon = -122.4173;
-
-function setup(){
-	fence = new geoFence(lat, lon, 0.03, insideTheFence, outsideTheFence, 'mi');
+function setup() {
+  createCanvas(displayWidth, displayHeight);
+  background(0);
 }
-
 
 function draw() {
+  noStroke();
+  fill(random(255));
+  var speed = dist(mouseX,mouseY,pmouseX,pmouseY);
+  ellipse(mouseX,mouseY,speed,speed);
 }
 
-function insideTheFence(position){
-	if (isInside<1) {
-		isInside = 1;
-		// do stuff only on change
-	}
-	document.getElementById("content").innerHTML = '37.803456 N, 122.417144 W. Negash Asegde: <a href="http://www.acheron.co/" target="_blank">Acheron</a>, Clare Bland: <a href="https://www.youtube.com/watch?v=D6XXAfWJZqQ" target="_blank">How to cleanse yourself of sin</a> and <a href="https://youtu.be/3H-QfXN25iw" target="_blank">Haiku poems by Siri (about the internet)</a>, Elle Coxon: <a href="https://www.facebook.com/media/set/?set=a.10209412057402296.1073741836.1350529750&type=1&l=233e4f4f7f" target="_blank">INT(ERNET)IMACY</a>, John Erbach: <a href="Final Icarus LLC.pdf" target="_blank">Icarus LLC</a>, Yelin Huang: offline, Josie Kidde: <a href="https://newhive.com/crybabies/real-first-page" target="_blank">Crybabies</a>, Danny Murzhanov: <a href="https://thezeropointfield.wordpress.com" target="_blank">The Zero Point Field</a>, Nate Woodward: Frequency Proflector (offline).';
-}
-
-function outsideTheFence(position) {
-	if (isInside>-1) {
-		isInside = -1;
-		// do stuff only on change
-	}
-	document.getElementById("content").innerHTML = '37.803456 N, 122.417144 W is on show at SFAI, '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'mi').toFixed(2)+' miles from here.';
+function mousePressed() {
+    fullscreen(true);
 }
