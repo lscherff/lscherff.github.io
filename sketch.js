@@ -5,7 +5,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  fill(random(255));
+  fill(random(255),random(255),random(255));
   var speed = dist(mouseX,mouseY,pmouseX,pmouseY);
   ellipse(mouseX,mouseY,speed,speed);
 }
