@@ -1,7 +1,7 @@
 var isInside = 0;
 var fence;
-var lat = 37.785878;
-var lon = -122.400419;
+var lat = 50.9214675;
+var lon = 6.9607342;
 
 function setup(){
 	fence = new geoFence(lat, lon, 0.04, insideTheFence, outsideTheFence, 'mi');
