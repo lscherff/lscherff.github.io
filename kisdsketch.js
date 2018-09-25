@@ -31,5 +31,5 @@ function outsideTheFence(position) {
 	document.getElementById('location-check').style.visibility = 'hidden';
     document.getElementById('inside').style.visibility = 'hidden';
     document.getElementById('not-inside').style.visibility = 'visible';
-    document.getElementById('not-inside').innerHTML = 'You are out. Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
+    document.getElementById('dist').innerHTML = 'Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
 }
