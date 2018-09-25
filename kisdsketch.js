@@ -1,10 +1,8 @@
 var isInside = 0;
 var fence;
-var lat = 50.9214675;
-var lon = 6.9607342;
 
 function preload(){
-	fence = new geoFence(lat, lon, 2.00, insideTheFence, outsideTheFence, 'km');
+	fence = new geoFence(lat, lon, radius, insideTheFence, outsideTheFence, 'km');
 }
 
 function setup() {
@@ -33,5 +31,5 @@ function outsideTheFence(position) {
 	document.getElementById('location-check').style.visibility = 'hidden';
     document.getElementById('inside').style.visibility = 'hidden';
     document.getElementById('not-inside').style.visibility = 'visible';
-    document.getElementById('not-inside').innerHTML += ' Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
+    document.getElementById('not-inside').innerHTML = 'You are out. Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
 }
