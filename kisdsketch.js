@@ -20,7 +20,7 @@ function insideTheFence(position){
 		isInside = 1;
 		// do stuff only on change
 	}
-    document.getElementById('lcoation-check').style.visibility = 'hidden';
+    document.getElementById('location-check').style.visibility = 'hidden';
     document.getElementById('not-inside').style.visibility = 'hidden';
 	//document.getElementById("content").innerHTML = 'You are in. Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
 }
@@ -31,7 +31,7 @@ function outsideTheFence(position) {
 		// do stuff only on change
 	}
 	//document.getElementById("content").innerHTML = 'You are out. Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
-    document.getElementById('lcoation-check').style.visibility = 'hidden';
+    document.getElementById('location-check').style.visibility = 'hidden';
     document.getElementById('inside').style.visibility = 'hidden';
     document.getElementById('not-inside').innerHTML += ' Distance is '+calcGeoDistance(position.latitude, position.longitude, lat, lon, 'km').toFixed(2);
 }
