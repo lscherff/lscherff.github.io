@@ -4,7 +4,7 @@ var lat = 50.9214675;
 var lon = 6.9607342;
 
 function preload(){
-	fence = new geoFence(lat, lon, 0.04, insideTheFence, outsideTheFence, 'km');
+	fence = new geoFence(lat, lon, 2.00, insideTheFence, outsideTheFence, 'km');
 }
 
 function setup() {
